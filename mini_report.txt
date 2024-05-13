@@ -6,12 +6,31 @@ Nama Anggota:
 - Komang Adi Satya Mahagangga (Ilmu Komputer/6)
 - Cindy Hapsari (Ilmu Komputer/4)
 
-Topik : Klasifikasi Aksara Bali Berdasarkan Citra Tulisan Tangan
+Topik : Klasifikasi Aksara Bali Berdasarkan Citra Tulisan Tangan 
 
 Latar Belakang:
+Aksara Bali merupakan salah satu bagian penting dari budaya Bali dan warisan turun temurun. Dengan mempelajari dan memelihara aksara bali, kita sudah membantu menjaga identitas budaya dan sejarah Bali. Meskipun Bahasa Indonesia merupakan bahasa resmi di Indonesia, aksara Bali masih menunjukan eksistensinya di dalam kehidupan masyarakat Bali. Aksara Bali masih digunakan secara luas di bali untuk berbagai tujuan komunikasi, seperti dalam upacara keagamaan, tradisi, bahkan merambah ke dunia pendidikan sebagai salah satu muatan lokal pendidikan di Bali. Dengan menerapkan pengenalan pola penulisan aksara Bali melalui citra tulisan tangan, merupakan bentuk dedikasi terhadap pelestarian aksara bali agar tetap eksis meskipun sekarang sudah memasuki era teknologi. Selain itu, dengan adanya platform ini menjadi bentuk integrasi teknologi dalam bidang edukasi Local genius dan pelestarian budaya lokal.
+
 Penjelasan Dataset:
+Dataset yang kami gunakan merupakan dataset aksara Bali dengan latar belakang hitam dan tulisan aksara berwarna putih. Adapun dataset tersebut diperoleh dari Kaggle.com, yakni pada tautan https://www.kaggle.com/datasets/hariangr/aksara-bali-datasets. Dataset ini terdiri atas 101 folder, dan masing-masing folder mewakili satu aksara dengan jumlah total 4151 gambar. Dari sisi dimensi, gambar pada dataset tersebut berukuran 32 x 32 pixel, dan terbilang cukup mumpuni untuk proses komputasi. 
+
+Data Preprocessing: 
+Pada tahap preprocessing, dataset ini menggunakan konsep augmentasi seperti zoom out, resizing dan konversi ke gambar biner. Hal ini dikarenakan agar proses komputasi tidak terlalu berat dan mengurangi adanya overfitting di dalam proses trainingnya
+
 Metode Ekstraksi Fitur:
+Metode yang digunakan berupa klasifikasi aksara bali berdasarkan citra tulisan tangan dengan konsep HOG. Histogram of Oriented Gradient (HOG) merupakan teknik pengolahan citra dengan menganalisis pola cahaya dan bayangan di dalamnya. HoG memperhatikan bagaimana terang dan gelapnya area di foto itu berubah, khususnya dengan melihat tepi-tepi objek di gambar. Hal ini tentu sangat bagus jika diterapkan pada gambar dengan perbedaan kontras yang cukup signifikan. Hal tersebut yang menjadi alasan penggunaan algoritma ini dalam mengekstrak fitur dari gambar biner pada studi kasus ini.
+
 Classifier:
+Penggunaan Classifier model Support Vector Machine (SVM) dengan kernel polinomial digunakan untuk memprediksi aksara berdasarkan fitur-fitur yang diekstraksi dari gambar yang diinputkan. 
+
 Hyperparameter:
+- Histogram of Oriented Gradients (HOG):
+orientations: Jumlah kompartemen dalam histogram orientasi. Dalam kode ini, jumlahnya adalah 9.
+pixels_per_cell: Ukuran sel dalam piksel untuk komputasi HOG. Dalam kode ini, ukurannya adalah (5, 5) piksel.
+cells_per_block: Ukuran blok sel dalam sel yang dibagi. Dalam kode ini, ukurannya adalah (2, 2) sel.
+- Support Vector Machine (SVM):
+Kernel: SVM menggunakan kernel polinomial.
+Degree: Derajat polinomial yang digunakan dalam kernel polinomial SVM. Nilai derajat polinomial dapat bervariasi tergantung pada implementasi dan default dari pustaka joblib.load() yang digunakan untuk memuat model.
+
 Hasil:
 
