@@ -30,7 +30,7 @@ pixels_per_cell: Ukuran sel dalam piksel untuk komputasi HOG. Dalam kode ini, uk
 cells_per_block: Ukuran blok sel dalam sel yang dibagi. Dalam kode ini, ukurannya adalah (2, 2) sel.
 - Support Vector Machine (SVM):
 Kernel: SVM menggunakan kernel polinomial.
-Degree: Derajat polinomial yang digunakan dalam kernel polinomial SVM. Nilai derajat polinomial dapat bervariasi tergantung pada implementasi dan default dari pustaka joblib.load() yang digunakan untuk memuat model.
+Degree: Merupakan derajat polinomial yang digunakan dalam kernel polinomial SVM. Dari hasil seleksi degree dari rentang 1 - 10, didapatkan best degree adalah 4 dengan akurasi
 
 Hasil:
 
