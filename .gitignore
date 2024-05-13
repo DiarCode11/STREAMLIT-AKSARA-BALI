@@ -3,3 +3,4 @@ zoom_out_image/
 binary_image2/
 dataset/
 *.pkl
+.venv/
