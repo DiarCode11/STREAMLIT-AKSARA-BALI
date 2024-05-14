@@ -34,4 +34,4 @@ Kernel: SVM menggunakan kernel polinomial.
 Degree: Merupakan derajat polinomial yang digunakan dalam kernel polinomial SVM. Dari hasil seleksi degree dari rentang 1 - 10, didapatkan best degree adalah 4 dengan akurasi 0.87%
 
 Hasil:
-
+Pada proses training didapatkan nilai akurasi 0.87% dengan menggunakan data train 80% dari dataset dan sisanya sebagai data test namun hasil uji coba melalui aplikasi streamlit masih ada salah prediksi, sehingga masih diperlukan penyesuaian konfigurasi baik dari dataset ataupun hyperparameternya. 
