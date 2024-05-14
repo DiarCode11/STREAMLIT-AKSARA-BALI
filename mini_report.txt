@@ -22,7 +22,7 @@ Metode Ekstraksi Fitur:
 Metode yang digunakan berupa klasifikasi aksara bali berdasarkan citra tulisan tangan dengan konsep HOG. Histogram of Oriented Gradient (HOG) merupakan teknik pengolahan citra dengan menganalisis pola cahaya dan bayangan di dalamnya. HoG memperhatikan bagaimana terang dan gelapnya area di foto itu berubah, khususnya dengan melihat tepi-tepi objek di gambar. Hal ini tentu sangat bagus jika diterapkan pada gambar dengan perbedaan kontras yang cukup signifikan. Hal tersebut yang menjadi alasan penggunaan algoritma ini dalam mengekstrak fitur dari gambar biner pada studi kasus ini.
 
 Classifier:
-Penggunaan Classifier model Support Vector Machine (SVM) dengan kernel polinomial digunakan untuk memprediksi aksara berdasarkan fitur-fitur yang diekstraksi dari gambar yang diinputkan. 
+Penggunaan Classifier model Support Vector Machine (SVM) dengan kernel polinomial digunakan untuk memprediksi aksara berdasarkan fitur-fitur yang diekstraksi dari gambar yang diinputkan. Pemilihan SVM dengan kernel polinomial dikarenakan memiliki akurasi tertinggi yaitu berkisar 0.87 %
 
 Hyperparameter:
 - Histogram of Oriented Gradients (HOG):
@@ -31,7 +31,7 @@ pixels_per_cell: Ukuran sel dalam piksel untuk komputasi HOG. Dalam kode ini, uk
 cells_per_block: Ukuran blok sel dalam sel yang dibagi. Dalam kode ini, ukurannya adalah (2, 2) sel.
 - Support Vector Machine (SVM):
 Kernel: SVM menggunakan kernel polinomial.
-Degree: Merupakan derajat polinomial yang digunakan dalam kernel polinomial SVM. Dari hasil seleksi degree dari rentang 1 - 10, didapatkan best degree adalah 4 dengan akurasi
+Degree: Merupakan derajat polinomial yang digunakan dalam kernel polinomial SVM. Dari hasil seleksi degree dari rentang 1 - 10, didapatkan best degree adalah 4 dengan akurasi 0.87%
 
 Hasil:
 
